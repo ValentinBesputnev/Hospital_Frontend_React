@@ -4,9 +4,9 @@ import "./Header.scss";
 
 const Header = () => {
   return (
-    <div className="header"> 
-        <img src={logo} /> 
-        <p>Войти в систему</p>
+    <div className="header">
+      <img className="logo" alt="" src={logo} />
+      <p>Войти в систему</p>
     </div>
   );
 };

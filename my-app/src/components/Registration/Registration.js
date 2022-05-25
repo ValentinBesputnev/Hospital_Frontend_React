@@ -32,7 +32,7 @@ const Registration = () => {
               await axios
               .post("http://localhost:5000/createNewUser", {
                 email,
-                password,
+                password
               })
               .then((res) => {
                 localStorage.setItem("token", res.data.token);
@@ -78,7 +78,7 @@ const Registration = () => {
         <img src={hos} alt="hospitalLogo" />
       </div>
       <div className="login">
-        <div>Регистрация</div>
+        <p>Регистрация</p>
         <form onSubmit={regUser}>
           <label>Логин:</label>
           <input type="email" id="email" name="email" placeholder="Логин" />
@@ -97,11 +97,12 @@ const Registration = () => {
             placeholder="Пароль"
           />
           <button className="butLog">Зарегистрироваться</button>
+          <Link to="/" className="link-text">
+            Авторизироваться
+          </Link>
         </form>
-        <div>
-          <Link to="/">Авторизироваться</Link>
-        </div>
       </div>
+          
       <Snackbar
         open={stateSnackbar}
         autoHideDuration={3000}
